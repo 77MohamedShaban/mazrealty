@@ -34,7 +34,7 @@ live demo: <https://mazrealty-live.onrender.com/>
 git clone https://github.com/Adosh74/mazrealty.live
 
 # Change the directory
-cd mazrealty.live
+cd mazrealty
 
 # Install the dependencies
 npm install
