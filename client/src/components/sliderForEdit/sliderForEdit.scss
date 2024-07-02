@@ -1,0 +1,132 @@
+@import '../../responsive.scss';
+
+.image-gallery-container {
+ 
+  	.fullSlider {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: black;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 9999;
+
+		.arrow {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            cursor: pointer;
+
+			img {
+				width: 50px;
+
+				@include md {
+					width: 30px;
+				}
+
+				@include sm {
+					width: 20px;
+				}
+
+				&.right {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		.imgContainer {
+			// show full image not cropped
+			flex: 1.3;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: white;
+			font-size: 36px;
+			font-weight: bold;
+			padding: 50px;
+			cursor: pointer;
+		}
+	}
+  	.image-gallery {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center; 
+  padding: 10px; 
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  padding-top: 20px;
+  overflow-y: auto;
+  max-height: 50vh; 
+  max-width: 80vh;
+  background-color: rgb(202, 174, 174);
+margin-bottom: 10px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: calc(50% - 10px); 
+  padding: 10px;
+  min-width: 20vh;
+  min-height: auto;
+  margin-bottom: 10px; 
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.05); 
+    }
+    img {
+      min-height: 200px;
+	  max-height: 200px;
+      width: auto;
+      cursor: pointer;
+      display: block; 
+      border-radius: inherit; 
+      
+    }
+
+    .delete-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 6px;
+      background-color: rgba(0, 0, 0, 0.5); 
+      color: white;
+      border: none;
+      border-radius: 50%; 
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.7); 
+      }
+    }}
+	@media (max-width: 600px) {
+  .image-wrapper {
+    width: calc(50% - 10px); 
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+.chat {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 5px;
+
+	.messages {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		overflow-y: auto;
+
+		h1 {
+			font-weight: 300;
+		}
+
+		.message {
+			background-color: white;
+			padding: 20px;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			cursor: pointer;
+
+			img {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			span {
+				font-weight: bold;
+			}
+			p {
+				padding: 5px 10px;
+				border-radius: 3px;
+				background-color: rgb(239, 233, 233);
+				color: rgb(117, 114, 114);
+			}
+		}
+	}
+
+	.chatBox {
+		flex: 1;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		.top {
+			background-color: #f7c14b85;
+			padding: 20px;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.user {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+				img {
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					object-fit: cover;
+				}
+			}
+			.close {
+				cursor: pointer;
+				color: rgb(115, 80, 35);
+				padding: 10px;
+				background-color: antiquewhite;
+				border-radius: 10px;
+				transition: background-color 0.3s ease;
+				&:hover {
+					background-color: rgb(217, 193, 163);
+				}
+			}
+		}
+		.center {
+			height: 350px;
+			overflow: auto;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			.chatMessage {
+				width: 50%;
+
+				&.own {
+					align-self: flex-end;
+					text-align: right;
+				}
+
+				span {
+					font-size: 12px;
+					background-color: #f7c14b39;
+					padding: 2px;
+					border-radius: 5px;
+				}
+			}
+		}
+		.bottom {
+			border: 2px solid #f7c14b85;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			textarea {
+				flex: 3;
+				height: 100%;
+				border: white;
+				padding: 20px;
+				background-color: rgb(249, 247, 236);
+				font-size: larger;
+				overflow-y: auto;
+				&.active {
+					background-color: black;
+					color: white;
+				}
+			}
+
+			button {
+				flex: 1;
+				background-color: #f7c14b85;
+				height: 100%;
+				border: none;
+				cursor: pointer;
+				color: rgb(206, 111, 43);
+				font-size: larger;
+				font-weight: 500;
+				transition: all 0.4s ease;
+				&:hover {
+					background-color: #f7c14baf;
+				}
+			}
+		}
+	}
+}

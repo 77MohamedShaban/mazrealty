@@ -1,0 +1,79 @@
+@keyframes ColorChangee {
+	0% {
+		background-color: teal;
+	}
+	100% {
+		background-color: rgb(3, 85, 85);
+	}
+}
+.profileUpdatePage {
+	height: 100%;
+	display: flex;
+	overflow: auto;
+	.formContainer {
+		flex: 3;
+		display: block;
+		align-items: center;
+		justify-content: center;
+		margin-right: 30px;
+
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			padding: 20px;
+
+			h1 {
+				color: rgb(39, 94, 66);
+			}
+			.item {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+
+				input {
+					padding: 20px;
+					border-radius: 5px;
+					border: 1px solid gray;
+				}
+				// pretty Label styling
+				label {
+					font-weight: bold;
+					font-size: 1.2em;
+				}
+			}
+			button {
+				cursor: pointer;
+				padding: 20px;
+				border-radius: 5px;
+				border: none;
+				background-color: teal;
+				color: white;
+				font-weight: bold;
+				margin-bottom: 50px;
+				&:hover {
+					animation: ColorChangee 0.8s infinite;
+				}
+				&:disabled {
+					opacity: 0.6;
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+
+	.sideContainer {
+		flex: 2;
+		background-color: #fcf5f3;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		justify-content: center;
+
+		.avatar {
+			width: 50%;
+			object-fit: cover;
+		}
+	}
+}

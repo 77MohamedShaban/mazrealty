@@ -1,0 +1,30 @@
+@import '../../responsive.scss';
+
+.lawyerPage {
+	display: flex;
+	height: 100%;
+	overflow-y: auto;
+	margin-top: 3px;
+	@include md {
+		flex-direction: column;
+		overflow: auto;
+	}
+
+	.list {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		padding-top: 20px;
+	}
+}
+
+.empty {
+	color: rgb(246, 246, 246);
+	font-size: larger;
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	background: rgb(148, 213, 207);
+	border-radius: 10px;
+	margin: 5px;
+}
