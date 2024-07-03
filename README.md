@@ -1,4 +1,4 @@
-# mazrealty.live
+# mazrealty
 
 1. [Introduction](#introduction)
 2. [Core Features](#core-features)
